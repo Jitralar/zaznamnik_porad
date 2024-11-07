@@ -30,3 +30,14 @@ Pro databázi byla zvolena knihovna ![SQLite](https://learn.microsoft.com/cs-cz/
 - Osoby mohou hlasovat pro dane body programu v celkovém programu schuze.
 - Aplikace ukládá, kolik lidí hlasuje pro daný bod programu s časovým razítkem.
 
+## Databáze:
+
+Databáze má v základu 4 tabulky `Osoby`, `Bod_programu`, `program` a `hlasování`.
+
+
+
+
+
+
+
+
