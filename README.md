@@ -14,7 +14,7 @@ Jednoduchá aplikace, která umužní uživateli promítat na jakém bodu jedná
     práce je realizována s využitím jazyka C# a .NET
     práce nevyužívá externí knihovny (pokud nejsou předem schváleny vyučujícím na základě domluvy)
     aplikace je napsána v souladu s „coding guidelines“ a „naming conventions“ podle jazyka C#
-    práce je vypracována samostatně studentem (resp. studenty – výjimky dle specifikace níže) a není založena na cizím kódu
+    práce je vypracována samostatně studentem a není založena na cizím kódu
     
     práce je postavena na jedné z následujících platforem:
     a) WPF + MVVM architektura (akceptována je i varianta s Avalonia UI + MVVM)
