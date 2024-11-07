@@ -50,14 +50,6 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
-            "Microsoft.Data.Sqlite.Core": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "SQLite": {
-              "target": "Package",
-              "version": "[3.13.0, )"
-            },
             "SQLitePCLRaw.core": {
               "target": "Package",
               "version": "[2.1.10, )"

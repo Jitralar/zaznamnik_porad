@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "asCKuWeHCluJhobN/0z0fiNR5HyXqn7AueYyBVBNo8WajnO3Nn+niAEDEer/3wmTNFM+91L4+eof/JRO+6r9CA==",
+  "dgSpecHash": "f8MF05ZTSPH9p3pcvKFeYUZVIsiIoiS6jYgSgpfJaSHNo8CrXFNyxzpWwaK1PJoPoHF9+ilD0GFc3+Pn8XQV/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\aplikace_zaznamnik-porad.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jirco\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.10\\microsoft.data.sqlite.core.8.0.10.nupkg.sha512",
+    "C:\\Users\\jirco\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
+    "C:\\Users\\jirco\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\jirco\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }
