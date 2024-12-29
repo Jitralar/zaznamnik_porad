@@ -11,6 +11,12 @@ namespace aplikace_zaznamnik_porad
     {
         private readonly Action<object> _execute;
         private readonly Func<object, bool> _canExecute;
+        private Action saveVote;
+
+        public RelayCommand(Action saveVote)
+        {
+            this.saveVote = saveVote;
+        }
 
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {

@@ -52,7 +52,7 @@ namespace MeetingApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/aplikace_zaznamnik-porad;V1.0.0.0;component/okno3.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/aplikace_zaznamnik-porad;component/okno3.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Okno3.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

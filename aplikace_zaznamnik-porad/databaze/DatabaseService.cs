@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Xml;
-using System.Data.SQLite;
-
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore.Sqlite;
 
 public class DatabaseService
 {
@@ -10,7 +12,7 @@ public class DatabaseService
 
     public void InitializeDatabase()
     {
-        using var connection = new SQLiteConnection(_connectionString);
+        using var connection = new SqliteConnection(_connectionString);
         connection.Open();
 
         var command = connection.CreateCommand();
