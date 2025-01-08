@@ -22,7 +22,7 @@ namespace aplikace_zaznamnik_porad
                 result.Add(new ProgramPorady
                 {
                     Id = reader.GetInt32(0),
-                    Date = reader.GetDateTime(1),
+                    Date = reader.GetDateTime(1).ToString(),
                     Lokace = reader.GetString(2),
                 });
             }
@@ -68,7 +68,7 @@ namespace aplikace_zaznamnik_porad
                     ProgramId = reader.GetInt32(1),
                     Nazev = reader.GetString(2),
                     Text = reader.GetString(3),
-                    Dulezity = reader.GetBoolean(4),
+                    Dulezity = reader.GetInt32(4),
                 });
             }
             return result;
