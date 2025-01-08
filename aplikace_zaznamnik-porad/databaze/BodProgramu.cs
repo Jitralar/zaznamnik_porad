@@ -12,7 +12,7 @@ namespace aplikace_zaznamnik_porad.databaze
         public int ProgramId { get; set; }
         public string Nazev { get; set; } = string.Empty;
         public string Text { get; set; } = string.Empty;
-        public bool Dulezity { get; set; }
+        public int Dulezity { get; set; } //hodnota v cisle, pak se to da referencovat a davat napriklad velikost fontu,...
     }
 
 

@@ -1,12 +1,40 @@
 ﻿<Window x:Class="aplikace_zaznamnik_porad.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:aplikace_zaznamnik_porad"
-        mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!-- ComboBox pro výběr porady -->
+        <ComboBox x:Name="ComboBoxPorady" 
+                  ItemsSource="{Binding SeznamPorad}" 
+                  DisplayMemberPath="Lokace" 
+                  SelectedItem="{Binding VybranaPorada}" 
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,10,0,0"/>
 
+        <!-- ListBox pro výběr účastníků -->
+        <ListBox x:Name="ListBoxUcastnici" 
+                 ItemsSource="{Binding SeznamOsob}" 
+                 DisplayMemberPath="Jmeno" 
+                 SelectionMode="Multiple" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,46,0,0" Height="171"/>
+
+        <!-- ComboBox pro zobrazení -->
+        <ComboBox x:Name="ComboBoxZobrazeni" 
+          ItemsSource="{Binding ZobrazeniMoznosti}" 
+          SelectedItem="{Binding VybraneZobrazeni}" 
+          HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,235,0,0"/>
+
+
+        <!-- ListView -->
+        <ListView x:Name="ListViewData" 
+                  ItemsSource="{Binding ZobrazenáData}" 
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="220,10,10,50"/>
+
+        <!-- Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10">
+            <Button Content="Add" Command="{Binding AddCommand}" Width="75" Margin="0,0,10,0"/>
+            <Button Content="Edit" Command="{Binding EditCommand}" Width="75" Margin="0,0,10,0"/>
+            <Button Content="Delete" Command="{Binding DeleteCommand}" Width="75"/>
+        </StackPanel>
     </Grid>
 </Window>
