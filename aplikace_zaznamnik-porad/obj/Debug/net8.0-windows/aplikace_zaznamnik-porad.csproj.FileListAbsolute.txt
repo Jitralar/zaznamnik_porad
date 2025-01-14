@@ -67,3 +67,4 @@ C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Deb
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.pdb
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.genruntimeconfig.cache
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\ref\aplikace_zaznamnik-porad.dll
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
