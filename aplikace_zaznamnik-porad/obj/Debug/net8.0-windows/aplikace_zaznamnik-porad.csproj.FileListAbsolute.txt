@@ -1,7 +1,6 @@
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad_MarkupCompile.cache
-C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad_MarkupCompile.lref
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.csproj.AssemblyReference.cache
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\Okno1.baml
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\Okno1.g.cs
