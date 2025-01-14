@@ -33,22 +33,43 @@ namespace aplikace_zaznamnik_porad
         {
             using var connection = new SqliteConnection(_connectionString);
             connection.Open();
+
             var command = connection.CreateCommand();
             command.CommandText = "SELECT * FROM Osoba";
             using var reader = command.ExecuteReader();
 
-            var result = new List<Osoba>();
+            var osoby = new List<Osoba>();
             while (reader.Read())
             {
-                result.Add(new Osoba
+                osoby.Add(new Osoba
                 {
                     Id = reader.GetInt32(0),
                     Jmeno = reader.GetString(1),
                     Prijmeni = reader.GetString(2),
+                    ProstredniJmeno = reader.IsDBNull(3) ? null : reader.GetString(3),
+                    Prezdivka = reader.IsDBNull(4) ? null : reader.GetString(4)
                 });
             }
-            return result;
+            return osoby;
         }
+
+        public void AddOsoba(string jmeno, string prijmeni, string prostredniJmeno, string prezdivka)
+        {
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = @"
+        INSERT INTO Osoba (Jmeno, Prijmeni, ProstredniJmeno, Prezdivka) 
+        VALUES ($jmeno, $prijmeni, $prostredniJmeno, $prezdivka)";
+            command.Parameters.AddWithValue("$jmeno", jmeno);
+            command.Parameters.AddWithValue("$prijmeni", prijmeni);
+            command.Parameters.AddWithValue("$prostredniJmeno", prostredniJmeno ?? (object)DBNull.Value);
+            command.Parameters.AddWithValue("$prezdivka", prezdivka ?? (object)DBNull.Value);
+            command.ExecuteNonQuery();
+        }
+
+
 
         public List<BodProgramu> GetBodyProgramu(int programId)
         {
@@ -114,6 +135,9 @@ namespace aplikace_zaznamnik_porad
     ";
             command.ExecuteNonQuery();
         }
+
+
+
 
 
 

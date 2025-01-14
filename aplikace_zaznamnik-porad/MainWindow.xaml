@@ -17,13 +17,15 @@
                  SelectionMode="Multiple" 
                  HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,46,0,0" Height="171">
 
-            <ListBox.ItemsSource>
-                <x:Array Type="{x:Type localdb:JmenoBool}">
-                    <localdb:JmenoBool Jmeno="asdasda" Check="false"/>
-                    <localdb:JmenoBool Jmeno="dva" Check="true" />
-                </x:Array> 
-            </ListBox.ItemsSource>
-            
+            <!--<ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding Check}"/>
+                        <TextBlock Text="{Binding Jmeno}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>-->
+
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -41,10 +43,25 @@
           HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,235,0,0"/>
 
 
-        <!-- ListView -->
+        <!-- ListView --><!--
         <ListView x:Name="ListViewData" 
                   ItemsSource="{Binding ZobrazenáData}" 
-                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="220,10,10,50"/>
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="220,10,10,50"/>-->
+
+        <ListView x:Name="ListViewData" 
+          ItemsSource="{Binding ZobrazenáData}" 
+          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="220,10,10,50">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Jmeno}" Margin="5"/>
+                        <TextBlock Text="{Binding Prijmeni}" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
 
         <!-- Buttons -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10">

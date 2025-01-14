@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|c:\\users\\jirco\\documents\\github\\zaznamnik_porad\\aplikace_zaznamnik-porad\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\jmenobool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:databaze\\jmenobool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\osoba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:databaze\\osoba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,6 +19,22 @@
       "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:databaze\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|c:\\users\\jirco\\documents\\github\\zaznamnik_porad\\aplikace_zaznamnik-porad\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\jmenobool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:databaze\\jmenobool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\osoba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:databaze\\osoba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\bodprogramu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:databaze\\bodprogramu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,20 +47,12 @@
       "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:databaze\\program-porady.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\hlasovaniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:hlasovaniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|solutionrelative:relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2DB9A91-9B33-48F7-84B1-65C7489C2EF8}|aplikace_zaznamnik-porad.csproj|C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\okno1.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -94,39 +94,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "JmenoBool.cs",
-              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\JmenoBool.cs",
-              "RelativeDocumentMoniker": "databaze\\JmenoBool.cs",
-              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\JmenoBool.cs",
-              "RelativeToolTip": "databaze\\JmenoBool.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T08:14:41.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DatabaseService.cs",
-              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\DatabaseService.cs",
-              "RelativeDocumentMoniker": "databaze\\DatabaseService.cs",
-              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\DatabaseService.cs",
-              "RelativeToolTip": "databaze\\DatabaseService.cs",
-              "ViewState": "AQIAAF4AAAAAyDMzMzPrv2cAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T07:22:23.359Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ProgramViewModel.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\ProgramViewModel.cs",
               "RelativeDocumentMoniker": "ProgramViewModel.cs",
               "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\ProgramViewModel.cs",
               "RelativeToolTip": "ProgramViewModel.cs",
-              "ViewState": "AQIAAFcAAAAA7P////8HwG4AAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAcwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T07:33:39.368Z"
+              "WhenOpened": "2024-11-07T07:33:39.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JmenoBool.cs",
+              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\JmenoBool.cs",
+              "RelativeDocumentMoniker": "databaze\\JmenoBool.cs",
+              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\JmenoBool.cs",
+              "RelativeToolTip": "databaze\\JmenoBool.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T08:14:41.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "databaze\\DatabaseService.cs",
+              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\DatabaseService.cs",
+              "RelativeToolTip": "databaze\\DatabaseService.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAgwCsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T07:22:23.359Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -142,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -150,23 +152,49 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T07:13:38.309Z"
+              "WhenOpened": "2024-11-07T07:13:38.309Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "RelayCommand.cs",
+              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\RelayCommand.cs",
+              "RelativeToolTip": "RelayCommand.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAkwBcAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:10:02.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\ViewModelBase.cs",
+              "RelativeToolTip": "ViewModelBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T01:10:25.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Osoba.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\Osoba.cs",
               "RelativeDocumentMoniker": "databaze\\Osoba.cs",
               "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\Osoba.cs",
               "RelativeToolTip": "databaze\\Osoba.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T07:23:39.65Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "BodProgramu.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\BodProgramu.cs",
               "RelativeDocumentMoniker": "databaze\\BodProgramu.cs",
@@ -178,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Hlasovani.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\Hlasovani.cs",
               "RelativeDocumentMoniker": "databaze\\Hlasovani.cs",
@@ -190,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Program-porady.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\databaze\\Program-porady.cs",
               "RelativeDocumentMoniker": "databaze\\Program-porady.cs",
@@ -202,19 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\ViewModelBase.cs",
-              "RelativeToolTip": "ViewModelBase.cs",
-              "ViewState": "AQIAABwAAAAAYJmZmZmpvw0AAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T01:10:25.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "HlasovaniViewModel.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\HlasovaniViewModel.cs",
               "RelativeDocumentMoniker": "HlasovaniViewModel.cs",
@@ -226,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "AssemblyInfo.cs",
@@ -246,18 +262,6 @@
               "RelativeToolTip": "Okno3.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-11-07T09:03:13.371Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "RelayCommand.cs",
-              "ToolTip": "C:\\Users\\jirco\\Documents\\GitHub\\zaznamnik_porad\\aplikace_zaznamnik-porad\\RelayCommand.cs",
-              "RelativeToolTip": "RelayCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T08:10:02.334Z"
             },
             {
               "$type": "Document",
