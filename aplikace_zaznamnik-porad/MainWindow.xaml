@@ -17,12 +17,12 @@
                  SelectionMode="Multiple" 
                  HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10,46,0,0" Height="171">
 
-            <<!--ListBox.ItemsSource>
+            <ListBox.ItemsSource>
                 <x:Array Type="{x:Type localdb:JmenoBool}">
-                    <localdb:JmenoBool Jmeno="asdasda" Check="false" />
+                    <localdb:JmenoBool Jmeno="asdasda" Check="false"/>
                     <localdb:JmenoBool Jmeno="dva" Check="true" />
                 </x:Array> 
-            </ListBox.ItemsSource>-->
+            </ListBox.ItemsSource>
             
             <ListBox.ItemTemplate>
                 <DataTemplate>
