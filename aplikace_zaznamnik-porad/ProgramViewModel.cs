@@ -11,7 +11,7 @@ namespace aplikace_zaznamnik_porad
         private readonly DatabaseService _databaseService;
 
         public ObservableCollection<Osoba> SeznamOsob { get; set; }
-        public ObservableCollection<object> ZobrazenáData { get; set; }
+        public ObservableCollection<object> ZobrazenaData { get; set; }
         public ObservableCollection<ProgramPorady> SeznamPorad { get; set; }
 
 
@@ -45,7 +45,7 @@ namespace aplikace_zaznamnik_porad
 
             // Load data
             SeznamOsob = new ObservableCollection<Osoba>(_databaseService.GetAllOsoby());
-            ZobrazenáData = new ObservableCollection<object>(SeznamOsob);
+            ZobrazenaData = new ObservableCollection<object>(SeznamOsob);
             SeznamPorad = new ObservableCollection<ProgramPorady>(_databaseService.GetAllPrograms());
 
         }
@@ -111,9 +111,9 @@ namespace aplikace_zaznamnik_porad
 
         private void AktualizujZobrazeni()
         {
-            ZobrazenáData.Clear();
+            ZobrazenaData.Clear();
             foreach (var osoba in SeznamOsob)
-                ZobrazenáData.Add(osoba);
+                ZobrazenaData.Add(osoba);
         }
 
         public ICommand NovaPoradaCommand => new RelayCommand(_ =>
@@ -158,6 +158,29 @@ namespace aplikace_zaznamnik_porad
                 MessageBox.Show("Bod programu byl úspěšně vytvořen.", "Úspěch", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         });
+
+        public ICommand HlasovatCommand => new RelayCommand(_ =>
+        {
+            if (VybranaPorada == null)
+            {
+                MessageBox.Show("Vyberte nejprve poradu.", "Upozornění", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Načtení bodů programu pro aktuální poradu
+            var bodyProgramu = new ObservableCollection<BodProgramu>(_databaseService.GetBodyProgramu(VybranaPorada.Id));
+
+            // Načtení přítomných osob
+            var pritomneOsoby = new ObservableCollection<Osoba>(SeznamOsob.Where(o => o.IsPresent));
+
+            // Otevření okna hlasování
+            var hlasovaniWindow = new HlasovaniWindow(new HlasovaniViewModel(_databaseService, bodyProgramu, pritomneOsoby, null));
+            hlasovaniWindow.ShowDialog();
+        });
+
+
+
+
 
 
 

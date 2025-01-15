@@ -24,7 +24,7 @@
         </Grid>
 
 
-        <ListView ItemsSource="{Binding ZobrazenáData}" SelectedItem="{Binding VybranaOsoba, Mode=TwoWay}"  Margin="10,50,10,10">
+        <ListView ItemsSource="{Binding ZobrazenaData}" SelectedItem="{Binding VybranaOsoba, Mode=TwoWay}"  Margin="10,50,10,10">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}" Width="50"/>

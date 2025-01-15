@@ -118,6 +118,82 @@ namespace aplikace_zaznamnik_porad
             command.ExecuteNonQuery();
         }
 
+        public List<BodProgramu> GetBodyProgramu(int programId)
+        {
+            var bodyProgramu = new List<BodProgramu>();
+
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT Id, ProgramId, Nazev, Text FROM BodProgramu WHERE ProgramId = $programId";
+            command.Parameters.AddWithValue("$programId", programId);
+
+            using var reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                bodyProgramu.Add(new BodProgramu
+                {
+                    Id = reader.GetInt32(0),
+                    ProgramId = reader.GetInt32(1),
+                    Nazev = reader.GetString(2),
+                    Text = reader.IsDBNull(3) ? null : reader.GetString(3),
+                });
+            }
+
+            return bodyProgramu;
+        }
+
+
+        public void AddHlasovani(Hlasovani hlasovani)
+        {
+            if (hlasovani == null) throw new ArgumentNullException(nameof(hlasovani));
+            if (hlasovani.BodProgramuId <= 0) throw new ArgumentException("Neplatný BodProgramuId");
+            if (hlasovani.OsobaId <= 0) throw new ArgumentException("Neplatný OsobaId");
+
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = @"
+        INSERT INTO Hlasovani (BodProgramuId, OsobaId, DateTime, Hlasoval)
+        VALUES ($bodProgramuId, $osobaId, $dateTime, $hlasoval)";
+            command.Parameters.AddWithValue("$bodProgramuId", hlasovani.BodProgramuId);
+            command.Parameters.AddWithValue("$osobaId", hlasovani.OsobaId);
+            command.Parameters.AddWithValue("$dateTime", hlasovani.DateTime ?? DBNull.Value.ToString());
+            command.Parameters.AddWithValue("$hlasoval", hlasovani.Hlasoval ?? string.Empty);
+            command.ExecuteNonQuery();
+        }
+
+
+        public bool ExistsBodProgramu(int id)
+        {
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT COUNT(1) FROM BodProgramu WHERE Id = $id";
+            command.Parameters.AddWithValue("$id", id);
+
+            return Convert.ToInt32(command.ExecuteScalar()) > 0;
+        }
+
+        public bool ExistsOsoba(int id)
+        {
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = "SELECT COUNT(1) FROM Osoba WHERE ID = $id";
+            command.Parameters.AddWithValue("$id", id);
+
+            return Convert.ToInt32(command.ExecuteScalar()) > 0;
+        }
+
+
+
+
+
 
 
 

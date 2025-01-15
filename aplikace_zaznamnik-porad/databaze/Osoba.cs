@@ -15,7 +15,7 @@ namespace aplikace_zaznamnik_porad.databaze
         public string? Prezdivka { get; set; }
 
         // Přidáme pomocnou vlastnost pro označení přítomnosti
-        public bool? IsPresent { get; set; } = false; // Výchozí hodnota
+        public bool IsPresent { get; set; } = false; // Výchozí hodnota
     }
 
 }

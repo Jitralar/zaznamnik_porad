@@ -1,0 +1,45 @@
+﻿<Window x:Class="aplikace_zaznamnik_porad.HlasovaniWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hlasovat" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" MinHeight="112.04" />
+            <RowDefinition Height="Auto" MinHeight="31.96" />
+            <RowDefinition Height="Auto" MinHeight="31.96" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- ComboBox pro výběr bodu programu -->
+        <Label Grid.Column="0" Content="Bod programu:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="26" Margin="0,0,288,0" />
+        <ComboBox Grid.Row="0" Grid.Column="1" ItemsSource="{Binding BodyProgramu}"
+                  DisplayMemberPath="Nazev"
+                  SelectedItem="{Binding VybranyBodProgramu, Mode=TwoWay}" Margin="5,5,5,5" />
+
+        <!-- Label pro text k bodu programu -->
+        <Label Grid.Row="1" Grid.Column="0" Content="Text k jednání:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="26" Margin="0,0,288,0" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding VybranyBodProgramu.Text}" Margin="5,5,5,5" TextWrapping="Wrap" />
+
+        <!-- ComboBox pro přítomné osoby -->
+        <Label Grid.Row="2" Grid.Column="0" Content="Hlasující osoba:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="26" Margin="0,0,288,0" />
+        <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding PritomneOsoby}"
+                  DisplayMemberPath="Jmeno"
+                  SelectedItem="{Binding VybranaOsoba, Mode=TwoWay}" Margin="5,5,5,5" />
+
+        <!-- ComboBox pro hlasování -->
+        <Label Grid.Row="3" Grid.Column="0" Content="Hlasování:" VerticalAlignment="Center" Grid.ColumnSpan="2" Height="26" Margin="0,0,288,0" />
+        <ComboBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding MoznostiHlasovani}"
+                  SelectedItem="{Binding VybraneHlasovani, Mode=TwoWay}" Margin="5,5,5,5" />
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,5" Grid.Column="1" Width="180">
+            <Button Content="OK" Width="80" Margin="5" Command="{Binding SaveCommand}" />
+            <Button Content="Cancel" Width="80" Margin="5" Command="{Binding CancelCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>
