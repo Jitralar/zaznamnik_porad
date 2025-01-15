@@ -27,6 +27,18 @@ namespace aplikace_zaznamnik_porad
             }
         }
 
+        private ProgramPorady? _vybranaPorada;
+        public ProgramPorady? VybranaPorada
+        {
+            get => _vybranaPorada;
+            set
+            {
+                _vybranaPorada = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public ProgramViewModel(DatabaseService databaseService)
         {
             _databaseService = databaseService;
@@ -122,6 +134,31 @@ namespace aplikace_zaznamnik_porad
             // Obnovíme ComboBox (není nutné, pokud je binding nastaven správně)
             OnPropertyChanged(nameof(SeznamPorad));
         });
+
+        public ICommand NovyBodProgramuCommand => new RelayCommand(_ =>
+        {
+            if (VybranaPorada == null)
+            {
+                MessageBox.Show("Vyberte nejprve poradu, ke které chcete vytvořit bod programu.", "Upozornění", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Vytvoření instance bodu programu
+            var novyBod = new BodProgramu
+            {
+                ProgramId = VybranaPorada.Id, // Automatické doplnění ProgramID
+            };
+
+            // Otevření okna pro vytvoření bodu programu
+            var bodProgramuWindow = new NovyBodProgramuWindow(novyBod);
+            if (bodProgramuWindow.ShowDialog() == true)
+            {
+                // Uložení bodu programu do databáze
+                _databaseService.AddBodProgramu(novyBod.ProgramId, novyBod.Nazev, novyBod.Text);
+                MessageBox.Show("Bod programu byl úspěšně vytvořen.", "Úspěch", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        });
+
 
 
 

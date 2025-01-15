@@ -69,3 +69,5 @@ C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Deb
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\EditOsobaWindow.baml
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\EditOsobaWindow.g.cs
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\NovyBodProgramuWindow.baml
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\NovyBodProgramuWindow.g.cs

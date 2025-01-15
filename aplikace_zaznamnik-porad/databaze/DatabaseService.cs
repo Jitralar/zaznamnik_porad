@@ -105,6 +105,20 @@ namespace aplikace_zaznamnik_porad
             command.ExecuteNonQuery();
         }
 
+        public void AddBodProgramu(int programId, string nazev, string? text) 
+        {
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = "INSERT INTO BodProgramu (ProgramId, Nazev, Text) VALUES ($programId, $nazev, $text)";
+            command.Parameters.AddWithValue("$programId", programId);
+            command.Parameters.AddWithValue("$nazev", nazev);
+            command.Parameters.AddWithValue("$text", text ?? (object)DBNull.Value);
+            command.ExecuteNonQuery();
+        }
+
+
 
 
 

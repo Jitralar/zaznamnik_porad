@@ -24,23 +24,31 @@
         </Grid>
 
 
-        <ListView ItemsSource="{Binding ZobrazenáData}" 
-          SelectedItem="{Binding VybranaOsoba, Mode=TwoWay}" 
-          Margin="10,55,10,55">
+        <ListView ItemsSource="{Binding ZobrazenáData}" SelectedItem="{Binding VybranaOsoba, Mode=TwoWay}"  Margin="10,50,10,10">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}" Width="50"/>
                     <GridViewColumn Header="Jméno" DisplayMemberBinding="{Binding Jmeno}" Width="150"/>
                     <GridViewColumn Header="Příjmení" DisplayMemberBinding="{Binding Prijmeni}" Width="150"/>
+                    <GridViewColumn Header="Přítomen" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding IsPresent, Mode=TwoWay}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
 
+
         <!-- Buttons for actions -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+            <Button Content="Nový bod" Command="{Binding NovyBodProgramuCommand}" Width="100" Margin="5" />
             <Button Content="ADD" Command="{Binding AddCommand}" Width="100" Margin="5" />
             <Button Content="EDIT" Command="{Binding EditCommand}" Width="100" Margin="5" />
             <Button Content="DELETE" Command="{Binding DeleteCommand}" Width="100" Margin="5" />
+            <Button Content="Hlasovat" Command="{Binding HlasovatCommand}" Width="100" Margin="5" />
         </StackPanel>
     </Grid>
 </Window>
