@@ -39,7 +39,7 @@ namespace aplikace_zaznamnik_porad
             connection.Open();
 
             var command = connection.CreateCommand();
-            command.CommandText = "SELECT * FROM BodProgramu";
+            command.CommandText = "SELECT * FROM ProgramPorady";
             using var reader = command.ExecuteReader();
 
             while (reader.Read())
@@ -92,6 +92,19 @@ namespace aplikace_zaznamnik_porad
             command.Parameters.AddWithValue("$id", id);
             command.ExecuteNonQuery();
         }
+
+        public void AddProgram(string date, string lokace)
+        {
+            using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
+
+            var command = connection.CreateCommand();
+            command.CommandText = "INSERT INTO ProgramPorady (Date, Lokace) VALUES ($date, $lokace)";
+            command.Parameters.AddWithValue("$date", date);
+            command.Parameters.AddWithValue("$lokace", lokace);
+            command.ExecuteNonQuery();
+        }
+
 
 
 

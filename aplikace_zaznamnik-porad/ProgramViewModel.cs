@@ -12,6 +12,9 @@ namespace aplikace_zaznamnik_porad
 
         public ObservableCollection<Osoba> SeznamOsob { get; set; }
         public ObservableCollection<object> ZobrazenáData { get; set; }
+        public ObservableCollection<ProgramPorady> SeznamPorad { get; set; }
+
+
 
         private Osoba? _vybranaOsoba;
         public Osoba? VybranaOsoba
@@ -31,6 +34,8 @@ namespace aplikace_zaznamnik_porad
             // Load data
             SeznamOsob = new ObservableCollection<Osoba>(_databaseService.GetAllOsoby());
             ZobrazenáData = new ObservableCollection<object>(SeznamOsob);
+            SeznamPorad = new ObservableCollection<ProgramPorady>(_databaseService.GetAllPrograms());
+
         }
 
         // ADD Command
@@ -98,6 +103,26 @@ namespace aplikace_zaznamnik_porad
             foreach (var osoba in SeznamOsob)
                 ZobrazenáData.Add(osoba);
         }
+
+        public ICommand NovaPoradaCommand => new RelayCommand(_ =>
+        {
+            // Vytvoření nového záznamu ProgramPorady
+            var novaPorada = new ProgramPorady
+            {
+                Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), // Časové razítko
+                Lokace = "nespecifikováno" // Výchozí místo porady
+            };
+
+            // Uložení do databáze
+            _databaseService.AddProgram(novaPorada.Date, novaPorada.Lokace);
+
+            // Přidání do kolekce SeznamPorad
+            SeznamPorad.Add(novaPorada);
+
+            // Obnovíme ComboBox (není nutné, pokud je binding nastaven správně)
+            OnPropertyChanged(nameof(SeznamPorad));
+        });
+
 
 
     }

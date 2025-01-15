@@ -3,13 +3,30 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Meeting App" Height="461" Width="600">
     <Grid>
-        <ComboBox ItemsSource="{Binding ZobrazeniMoznosti}"
-                  SelectedItem="{Binding VybraneZobrazeni, Mode=TwoWay}"
-                  Margin="10" Height="30" VerticalAlignment="Top" />
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <!-- ComboBox -->
+            <ComboBox Grid.Column="0"
+              ItemsSource="{Binding SeznamPorad}"
+              DisplayMemberPath="Date"
+              SelectedItem="{Binding VybranaPorada, Mode=TwoWay}" 
+              Margin="0,0,88,0" Height="37" VerticalAlignment="Top" />
+
+            <!-- Button Nová porada -->
+            <Button
+            Content="Nová porada" 
+            Margin="497,0,0,0" 
+            Command="{Binding NovaPoradaCommand}" Height="37" VerticalAlignment="Top" />
+        </Grid>
+
 
         <ListView ItemsSource="{Binding ZobrazenáData}" 
           SelectedItem="{Binding VybranaOsoba, Mode=TwoWay}" 
-          Margin="10,50,10,60">
+          Margin="10,55,10,55">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}" Width="50"/>
