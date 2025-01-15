@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("aplikace_zaznamnik-porad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa49fbc736265db33d13cf5971cf822eb604bd9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf6ab625a4ffaef36a74d5c0a5d5f68928b3b502")]
 [assembly: System.Reflection.AssemblyProductAttribute("aplikace_zaznamnik-porad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("aplikace_zaznamnik-porad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
