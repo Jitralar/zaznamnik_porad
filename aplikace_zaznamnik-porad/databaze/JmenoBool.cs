@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace aplikace_zaznamnik_porad.databaze
 {
-    internal class JmenoBool
+    public class JmenoBool
     {
-        public string Jmeno { get; set; }
+        public string? Jmeno { get; set; }
         public bool Check { get; set; }
 
     }

@@ -8,9 +8,7 @@ namespace aplikace_zaznamnik_porad
         {
             InitializeComponent();
             var databaseService = new DatabaseService();
-            databaseService.InitializeDatabase(); // Inicializace databáze
             DataContext = new ProgramViewModel(databaseService);
         }
-
     }
 }

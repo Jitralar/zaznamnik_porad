@@ -1,0 +1,27 @@
+﻿<Window x:Class="aplikace_zaznamnik_porad.NovyBodProgramuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nový bod programu" Height="200" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Název:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Nazev, UpdateSourceTrigger=PropertyChanged}" Margin="5" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Text k jednání:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" Margin="5" />
+
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Vytvořit" Width="80" Margin="5" Command="{Binding SaveCommand}" />
+            <Button Content="Zrušit" Width="80" Margin="5" Command="{Binding CancelCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>

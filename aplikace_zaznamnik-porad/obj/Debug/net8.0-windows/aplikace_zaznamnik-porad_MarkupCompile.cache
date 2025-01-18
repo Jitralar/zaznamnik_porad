@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\App.xaml
-21098824073
+5-1836274074
 
-14-1684716861
+19-550715854
 217-642519215
-MainWindow.xaml;Okno1.xaml;
+EditOsobaWindow.xaml;HlasovaniWindow.xaml;MainWindow.xaml;NovyBodProgramuWindow.xaml;Okno1.xaml;
 
 False
 

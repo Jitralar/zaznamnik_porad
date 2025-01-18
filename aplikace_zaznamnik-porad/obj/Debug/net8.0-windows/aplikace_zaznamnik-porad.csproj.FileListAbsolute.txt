@@ -1,7 +1,5 @@
-C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad_MarkupCompile.cache
-C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad_MarkupCompile.lref
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.csproj.AssemblyReference.cache
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\Okno1.baml
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\Okno1.g.cs
@@ -54,7 +52,6 @@ C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\bin\Deb
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\bin\Debug\net8.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\bin\Debug\net8.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.g.resources
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.AssemblyInfoInputs.cache
@@ -68,3 +65,11 @@ C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Deb
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\aplikace_zaznamnik-porad.genruntimeconfig.cache
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\ref\aplikace_zaznamnik-porad.dll
 C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\EditOsobaWindow.baml
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\EditOsobaWindow.g.cs
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\NovyBodProgramuWindow.baml
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\NovyBodProgramuWindow.g.cs
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\HlasovaniWindow.baml
+C:\Users\jirco\Documents\GitHub\zaznamnik_porad\aplikace_zaznamnik-porad\obj\Debug\net8.0-windows\HlasovaniWindow.g.cs

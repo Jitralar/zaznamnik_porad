@@ -1,5 +1,7 @@
 ﻿using aplikace_zaznamnik_porad.databaze;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 
 namespace aplikace_zaznamnik_porad
@@ -8,103 +10,180 @@ namespace aplikace_zaznamnik_porad
     {
         private readonly DatabaseService _databaseService;
 
-        public ObservableCollection<ProgramPorady> SeznamPorad { get; set; }
         public ObservableCollection<Osoba> SeznamOsob { get; set; }
-        public ObservableCollection<object> ZobrazenáData { get; set; }
+        public ObservableCollection<object> ZobrazenaData { get; set; }
+        public ObservableCollection<ProgramPorady> SeznamPorad { get; set; }
 
-        // Nová vlastnost ZobrazeniMoznosti
-        public ObservableCollection<string> ZobrazeniMoznosti { get; set; }
 
-        // Nová vlastnost VybraneZobrazeni
-        private string _vybraneZobrazeni;
-        public string VybraneZobrazeni
+
+        private Osoba? _vybranaOsoba;
+        public Osoba? VybranaOsoba
         {
-            get => _vybraneZobrazeni;
+            get => _vybranaOsoba;
             set
             {
-                _vybraneZobrazeni = value;
+                _vybranaOsoba = value;
                 OnPropertyChanged();
-                AktualizujZobrazeni();
             }
         }
 
-        private ProgramPorady _vybranaPorada;
-        public ProgramPorady VybranaPorada
+        private ProgramPorady? _vybranaPorada;
+        public ProgramPorady? VybranaPorada
         {
             get => _vybranaPorada;
             set
             {
                 _vybranaPorada = value;
                 OnPropertyChanged();
-                NactiBodyProgramu();
             }
         }
+
 
         public ProgramViewModel(DatabaseService databaseService)
         {
             _databaseService = databaseService;
-            SeznamPorad = new ObservableCollection<ProgramPorady>(_databaseService.GetAllPrograms());
-            SeznamOsob = new ObservableCollection<Osoba>(_databaseService.GetAllOsoby());
-            ZobrazenáData = new ObservableCollection<object>();
 
-            // Inicializace ZobrazeniMoznosti
-            ZobrazeniMoznosti = new ObservableCollection<string>
-            {
-                "Osoby",
-                "Přehled porad",
-                "Body programu"
-            };
+            // Load data
+            SeznamOsob = new ObservableCollection<Osoba>(_databaseService.GetAllOsoby());
+            ZobrazenaData = new ObservableCollection<object>(SeznamOsob);
+            SeznamPorad = new ObservableCollection<ProgramPorady>(_databaseService.GetAllPrograms());
+
         }
 
-        private void NactiBodyProgramu()
+        // ADD Command
+        public ICommand AddCommand => new RelayCommand(_ =>
         {
-            if (VybranaPorada != null)
+            var novaOsoba = new Osoba { Jmeno = "Nové", Prijmeni = "Jméno" };
+            _databaseService.AddOsoba(novaOsoba.Jmeno, novaOsoba.Prijmeni);
+            SeznamOsob.Add(novaOsoba);
+            AktualizujZobrazeni();
+        });
+
+        // EDIT Command
+        public ICommand EditCommand => new RelayCommand(_ =>
+        {
+            if (VybranaOsoba != null)
             {
-                ZobrazenáData.Clear();
-                foreach (var bod in _databaseService.GetBodyProgramu(VybranaPorada.Id))
+                // Vytvoření kopie vybrané osoby pro úpravu
+                var osobaKEditaci = new Osoba
                 {
-                    ZobrazenáData.Add(bod);
+                    Id = VybranaOsoba.Id,
+                    Jmeno = VybranaOsoba.Jmeno,
+                    Prijmeni = VybranaOsoba.Prijmeni
+                };
+
+                // Otevření editačního okna
+                var editWindow = new EditOsobaWindow(osobaKEditaci);
+                if (editWindow.ShowDialog() == true) // Pokud uživatel potvrdí změny
+                {
+                    // Uložení změn do databáze
+                    _databaseService.UpdateOsoba(osobaKEditaci.Id, osobaKEditaci.Jmeno, osobaKEditaci.Prijmeni);
+
+                    // Aktualizace původní osoby v seznamu
+                    VybranaOsoba.Jmeno = osobaKEditaci.Jmeno;
+                    VybranaOsoba.Prijmeni = osobaKEditaci.Prijmeni;
+                    OnPropertyChanged(nameof(SeznamOsob)); // Aktualizace UI
+                    AktualizujZobrazeni();
                 }
             }
-        }
+            else
+            {
+                MessageBox.Show("Vyberte osobu k úpravě.");
+            }
+        });
+
+
+
+        // DELETE Command
+        public ICommand DeleteCommand => new RelayCommand(_ =>
+        {
+            if (VybranaOsoba != null)
+            {
+                _databaseService.DeleteOsoba(VybranaOsoba.Id);
+                SeznamOsob.Remove(VybranaOsoba);
+                AktualizujZobrazeni();
+            }
+            else
+            {
+                MessageBox.Show("Vyberte osobu k odstranění.");
+            }
+        });
 
         private void AktualizujZobrazeni()
         {
-            ZobrazenáData.Clear();
-
-            switch (VybraneZobrazeni)
-            {
-                case "Osoby":
-                    foreach (var osoba in SeznamOsob)
-                    {
-                        ZobrazenáData.Add(osoba);
-                    }
-                    break;
-                case "Přehled porad":
-                    foreach (var program in SeznamPorad)
-                    {
-                        ZobrazenáData.Add(program);
-                    }
-                    break;
-                case "Body programu":
-                    if (VybranaPorada != null)
-                    {
-                        foreach (var bod in _databaseService.GetBodyProgramu(VybranaPorada.Id))
-                        {
-                            ZobrazenáData.Add(bod);
-                        }
-                    }
-                    break;
-            }
+            ZobrazenaData.Clear();
+            foreach (var osoba in SeznamOsob)
+                ZobrazenaData.Add(osoba);
         }
 
-        // Commands
-        public ICommand AddCommand => new RelayCommand(AddItem);
-        public ICommand EditCommand => new RelayCommand(EditItem);
-        public ICommand DeleteCommand => new RelayCommand(DeleteItem);
+        public ICommand NovaPoradaCommand => new RelayCommand(_ =>
+        {
+            // Vytvoření nového záznamu ProgramPorady
+            var novaPorada = new ProgramPorady
+            {
+                Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), // Časové razítko
+                Lokace = "nespecifikováno" // Výchozí místo porady
+            };
 
-        private void AddItem() { /* Logika pro přidání */ }
-        private void EditItem() { /* Logika pro editaci */ }
-        private void DeleteItem() { /* Logika pro mazání */ }
+            // Uložení do databáze
+            _databaseService.AddProgram(novaPorada.Date, novaPorada.Lokace);
+
+            // Přidání do kolekce SeznamPorad
+            SeznamPorad.Add(novaPorada);
+
+            // Obnovíme ComboBox (není nutné, pokud je binding nastaven správně)
+            OnPropertyChanged(nameof(SeznamPorad));
+        });
+
+        public ICommand NovyBodProgramuCommand => new RelayCommand(_ =>
+        {
+            if (VybranaPorada == null)
+            {
+                MessageBox.Show("Vyberte nejprve poradu, ke které chcete vytvořit bod programu.", "Upozornění", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Vytvoření instance bodu programu
+            var novyBod = new BodProgramu
+            {
+                ProgramId = VybranaPorada.Id, // Automatické doplnění ProgramID
+            };
+
+            // Otevření okna pro vytvoření bodu programu
+            var bodProgramuWindow = new NovyBodProgramuWindow(novyBod);
+            if (bodProgramuWindow.ShowDialog() == true)
+            {
+                // Uložení bodu programu do databáze
+                _databaseService.AddBodProgramu(novyBod.ProgramId, novyBod.Nazev, novyBod.Text);
+                MessageBox.Show("Bod programu byl úspěšně vytvořen.", "Úspěch", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        });
+
+        public ICommand HlasovatCommand => new RelayCommand(_ =>
+        {
+            if (VybranaPorada == null)
+            {
+                MessageBox.Show("Vyberte nejprve poradu.", "Upozornění", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Načtení bodů programu pro aktuální poradu
+            var bodyProgramu = new ObservableCollection<BodProgramu>(_databaseService.GetBodyProgramu(VybranaPorada.Id));
+
+            // Načtení přítomných osob
+            var pritomneOsoby = new ObservableCollection<Osoba>(SeznamOsob.Where(o => o.IsPresent));
+
+            // Otevření okna hlasování
+            var hlasovaniWindow = new HlasovaniWindow(new HlasovaniViewModel(_databaseService, bodyProgramu, pritomneOsoby, null));
+            hlasovaniWindow.ShowDialog();
+        });
+
+
+
+
+
+
+
+
     }
 }
